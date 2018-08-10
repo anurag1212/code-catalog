@@ -18,9 +18,6 @@ def split(head):
     _break(slow, h1)
 
     h2 = fast if fast is head else fast.next
-    if h2 is fast:
-        _break(h1, h2)
-    else:
-        fast.next = None
+    _break(fast, h2)
 
     return h1,h2
